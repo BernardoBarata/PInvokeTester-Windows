@@ -26,16 +26,16 @@ class PeristalticPump
 // to send this information to the C# side
 class PeristalticPumpWrapper
 {
-public:
-	class PeristalticPumpWrapper() {
-		_pump = PeristalticPump();
-	}
+	public:
+		 PeristalticPumpWrapper() {
+			_pump = PeristalticPump();
+		}
 
-	void Stop();
-	Status* GetStatus();
+		void Stop();
+		Status* GetStatus();
 
 
-private:
-	PeristalticPump _pump;
-	Status _status;
+	private:
+		PeristalticPump _pump;
+		Status _status;
 };
