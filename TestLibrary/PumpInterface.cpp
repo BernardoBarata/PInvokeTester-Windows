@@ -23,6 +23,7 @@ extern "C"  PeristalticPumpWrapper * CreateNewPumpWrapper() {
 
 
 extern "C"  Status * GenerateStatusWrapper(PeristalticPumpWrapper * Pump) {
+	Pump->Stop();
 	Status* statPtr = Pump->GetStatus();
 	return statPtr;
 }
