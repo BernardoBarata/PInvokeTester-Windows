@@ -23,6 +23,7 @@ extern "C" __declspec(dllexport) PeristalticPumpWrapper * CreateNewPumpWrapper()
 
 
 extern "C" __declspec(dllexport) Status * GenerateStatusWrapper(PeristalticPumpWrapper * Pump) {
+	Pump->Stop();
 	Status* statPtr = Pump->GetStatus();
 	return statPtr;
 }
