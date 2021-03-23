@@ -97,19 +97,19 @@ namespace PInvokeTester
     /// </summary>
     public class Status
 	{
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr CreateStatus();
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern void SetSpeed(IntPtr statPtr, int s);
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern int GetSpeed(IntPtr statPtr);
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern void SetTemp(IntPtr statPtr, int t);
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern int GetTemp(IntPtr statPtr);
 
 
@@ -155,16 +155,16 @@ namespace PInvokeTester
     public class PeristalticPump
 	{
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr CreateNewPump();
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern void PumpAdd(IntPtr pumpPtr, int a, int b);
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern int GetResult(IntPtr pumpPtr);
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr GenerateStatus(IntPtr pumpPtr);
 
 		private readonly IntPtr _pumpPointer;
@@ -206,10 +206,10 @@ namespace PInvokeTester
     /// </summary>
     public class PeristalticPumpWrapper
 	{
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr CreateNewPumpWrapper();
 
-		[DllImport("TestLibrary.dll", CallingConvention = CallingConvention.Cdecl)]
+		[DllImport("TestLibrary.so", CallingConvention = CallingConvention.Cdecl)]
 		private static extern IntPtr GenerateStatusWrapper(IntPtr pumpPtr);
 
 		private readonly IntPtr _pumpWrapperPointer;
