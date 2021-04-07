@@ -18,7 +18,6 @@ namespace PInvokeTester
 			switch (num)
 			{
 				case 0:
-
 					TestWrapper();
 					break;
 				case 1:
